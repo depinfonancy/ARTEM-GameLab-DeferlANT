@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Mouse_control : MonoBehaviour
 {
@@ -13,10 +14,24 @@ public class Mouse_control : MonoBehaviour
     // marque quand le bouton de la souris est enfonce
     bool enCours = false;
 
+    Tilemap tilemap;
+
+
+    void Start()
+    {
+        Tilemap tilemap = GetComponent<Tilemap>();
+    }
 
 
     void Update()
     {
+        Vector3 posFin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // controle d'un petit curseur qui montre ou sera placee la prochaine pheromone (on limite les possibilites 
+        // de placement pour essayer de rendre le code plus facile).
+        Vector3 globalTilePosition = tilemap.GetCellCenterWorld(posFin); // A FINIR
+
+
+
         // a l'appui sur le bouton gauche de la souris un cercle de pheromone apparait
         if (Input.GetMouseButtonDown(0))
         {
@@ -36,7 +51,6 @@ public class Mouse_control : MonoBehaviour
         // update de la taille de la pheromone avec la souris
         if (enCours)
         {
-            Vector3 posFin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float dist = Vector3.Distance(posFin, posInit);
             pheromone.transform.localScale = dist * new Vector3(1, 1, 1);
         }
