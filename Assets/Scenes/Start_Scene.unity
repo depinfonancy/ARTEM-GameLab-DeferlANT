@@ -118,18 +118,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 407485977}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8669185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8669184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a497ced3ffb684890debee8f6a490a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &8669186
 Animator:
   serializedVersion: 3
@@ -675,7 +663,6 @@ GameObject:
   - component: {fileID: 220563341}
   - component: {fileID: 220563340}
   - component: {fileID: 220563339}
-  - component: {fileID: 220563338}
   m_Layer: 0
   m_Name: VisuFourmi
   m_TagString: Untagged
@@ -683,18 +670,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &220563338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220563337}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e847cc92db88c146a9c457ceb8c1901, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &220563339
 Animator:
   serializedVersion: 3
@@ -1050,6 +1025,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test_ball
       objectReference: {fileID: 0}
+    - target: {fileID: 1865813232131741919, guid: c6baef8f86dd2244c979dae9f6ed38d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1865813232131741891, guid: c6baef8f86dd2244c979dae9f6ed38d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1165,6 +1145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54c35ebfbb60284b8b92582cf1c13d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nav: {fileID: 0}
 --- !u!195 &462704263
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1215,6 +1198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a497ced3ffb684890debee8f6a490a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_reaching_point: 0
+  dest: {x: 0, y: 0, z: 0}
 --- !u!4 &486640772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 977002054478816584, guid: 07c95760539f8b6488bb933e1a6b46db,
@@ -10330,6 +10315,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TilePlein: {fileID: 11400000, guid: 375f2fd551e4ca7489ed0b747f6a6c1d, type: 2}
+  TileSalle: {fileID: 11400000, guid: 3a57dd8a7807bcf4a8ea35602ba8b27a, type: 2}
+  TileSalle_gauche: {fileID: 11400000, guid: d97c610df5ee86b478eeba7f7d97e1ce, type: 2}
+  TileSalle_droite: {fileID: 11400000, guid: a69730a5f42d3b349b4899b940e5f97b, type: 2}
+  TileEn_cours_gauche: {fileID: 11400000, guid: 3853863e85b2b9a44b4adb9e89115932,
+    type: 2}
+  TileEn_cours_droite: {fileID: 11400000, guid: 015c0cf42e9133f4c868c6b0fa36ddf3,
+    type: 2}
+  TileEn_cours_bas: {fileID: 11400000, guid: 22889c53116830b4db0ed520c54b20df, type: 2}
+  TileEn_cours_haut: {fileID: 11400000, guid: 679a738c7da860146b56e8877c686cce, type: 2}
 --- !u!1001 &1392448390
 PrefabInstance:
   m_ObjectHideFlags: 0

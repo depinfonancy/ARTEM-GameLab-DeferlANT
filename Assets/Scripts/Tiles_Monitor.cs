@@ -7,7 +7,17 @@ public class Tiles_Monitor : MonoBehaviour
 {
     public static Tilemap tilemap;
     public TileBase TilePlein; //Tile pleine à mettre en paramètre pour l'exclure de la liste des tiles accessibles
+    public TileBase TileSalle;
+    public TileBase TileSalle_gauche;
+    public TileBase TileSalle_droite;
+    public TileBase TileEn_cours_gauche;
+    public TileBase TileEn_cours_droite;
+    public TileBase TileEn_cours_bas;
+    public TileBase TileEn_cours_haut;
+
     public static List<Vector3> accesibleTilePositionList = new List<Vector3>(); //Liste positions des tiles accessibles aux fourmis
+    public static List<Vector3> TileofInterest = new List<Vector3>(); //Liste positions des tiles pour l'IA des fourmis
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,25 +32,20 @@ public class Tiles_Monitor : MonoBehaviour
             for (int y = 0; y < bounds.size.y; y++)
             {
                 TileBase tile = tileArray[x + y * bounds.size.x];
-                if (tile != null && tile.name != TilePlein.name)
+                if (tile != null && tile != TilePlein)
                 {
                     //coordonnées locales de la tile
-                    Vector3Int localTilePosition = new Vector3Int(x, y, 0);
+                    Vector3Int localTilePosition = new Vector3Int(x+bounds.xMin, y+bounds.yMin, 0);
+
                     //conversion en coordonnées globales pour le navmesh
-
-                    //Vector3 globalTilePosition = tilemap.GetCellCenterWorld(localTilePosition);
-
-                    Vector3 globalTilePosition = tilemap.CellToWorld(localTilePosition);
-                    Vector3 globalBoundPosition = tilemap.CellToWorld(bounds.position);
-
-                    globalTilePosition = (globalBoundPosition - globalTilePosition)/2;
-
-                    //Debug.Log("bounds.position.x :" + bounds.position.x + " bounds.position.y :" + bounds.position.y);
-                    //globalTilePosition.x = bounds.position.x - globalTilePosition.x;
-                    //globalTilePosition.y = bounds.position.y - globalTilePosition.y;
-
+                    Vector3 globalTilePosition = tilemap.GetCellCenterWorld(localTilePosition);
+                    
                     accesibleTilePositionList.Add(globalTilePosition);
                     //Debug.Log("AddedTile:" + tile.name);
+                    if (tile == TileSalle || tile == TileSalle_droite || tile == TileSalle_gauche || tile == TileEn_cours_bas || tile == TileEn_cours_droite || tile == TileEn_cours_gauche || tile == TileEn_cours_haut)
+                    {
+                        TileofInterest.Add(globalTilePosition);
+                    }
                 }
             }
         }
