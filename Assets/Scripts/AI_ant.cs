@@ -24,7 +24,7 @@ public class AI_ant : MonoBehaviour
     private Vector3 pickRandomTile()
     {
         //récupération d'un nombre aléatoire correspondant à un index de la liste des tiles accessibles
-        int randomNumber = (int)UnityEngine.Random.Range(0, Tiles_Monitor.TileofInterest.Count - 1);
+        int randomNumber = (int)UnityEngine.Random.Range(0, Tiles_Monitor.TileofInterest.Count);
         //récupéartion de la coordonnée globale de la tile choisie aléatoirement
         Vector3 globalTilePosition = Tiles_Monitor.TileofInterest[randomNumber];
         return globalTilePosition;
@@ -60,7 +60,7 @@ public class AI_ant : MonoBehaviour
             m_reaching_point = false;
         }
         
-        GameObject.Find("VisuFourmi").transform.position = gameObject.transform.position;
+        gameObject.transform.parent.Find("VisuFourmi").transform.position = gameObject.transform.position;
         
 
     
