@@ -5,8 +5,9 @@ using UnityEngine.Tilemaps;
 
 public class Tiles_Monitor : MonoBehaviour
 {
-    public static Tilemap tilemap;
+    public static Tilemap tilemap; //definition de la tilemap
     public TileBase TilePlein; //Tile pleine à mettre en paramètre pour l'exclure de la liste des tiles accessibles
+    //Ci dessous toutes les tiles représentants des "points d'intérêts" (cad des destinations possbiles) pour les fourmis
     public TileBase TileSalle;
     public TileBase TileSalle_gauche;
     public TileBase TileSalle_droite;
@@ -22,7 +23,7 @@ public class Tiles_Monitor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Tilemap tilemap = GetComponent<Tilemap>();
+        Tilemap tilemap = GetComponent<Tilemap>();  //récupération de la Tilemap
         
         BoundsInt bounds = tilemap.cellBounds; //récupère le rectangle encadrant toutes les tiles disposées
         TileBase[] tileArray = tilemap.GetTilesBlock(bounds); //renvoi toutes les tiles comprises dans "bounds"
@@ -31,17 +32,19 @@ public class Tiles_Monitor : MonoBehaviour
         {
             for (int y = 0; y < bounds.size.y; y++)
             {
-                TileBase tile = tileArray[x + y * bounds.size.x];
+                TileBase tile = tileArray[x + y * bounds.size.x];  //récupère la tile de position (x,y)
                 if (tile != null && tile != TilePlein)
                 {
                     //coordonnées locales de la tile
-                    Vector3Int localTilePosition = new Vector3Int(x+bounds.xMin, y+bounds.yMin, 0);
+                    Vector3Int localTilePosition = new Vector3Int(x+bounds.xMin, y+bounds.yMin, 0);  
 
                     //conversion en coordonnées globales pour le navmesh
                     Vector3 globalTilePosition = tilemap.GetCellCenterWorld(localTilePosition);
                     
+                    //ajout de cette coordonnée à la liste
                     accesibleTilePositionList.Add(globalTilePosition);
                     //Debug.Log("AddedTile:" + tile.name);
+
                     if (tile == TileSalle || tile == TileSalle_droite || tile == TileSalle_gauche || tile == TileEn_cours_bas || tile == TileEn_cours_droite || tile == TileEn_cours_gauche || tile == TileEn_cours_haut)
                     {
                         TileofInterest.Add(globalTilePosition);

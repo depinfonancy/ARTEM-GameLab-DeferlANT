@@ -1,0 +1,519 @@
+fileFormatVersion: 2
+guid: 80835668f00690244bff949ea39278d9
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "fourmie-ouvri\xE8re-saut-d_0"
+    21300002: "fourmie-ouvri\xE8re-saut-d_1"
+    21300004: "fourmie-ouvri\xE8re-saut-d_2"
+    21300006: "fourmie-ouvri\xE8re-saut-d_3"
+    21300008: "fourmie-ouvri\xE8re-saut-d_4"
+    21300010: "fourmie-ouvri\xE8re-saut-d_5"
+    21300012: "fourmie-ouvri\xE8re-saut-d_6"
+    21300014: "fourmie-ouvri\xE8re-saut-d_7"
+    21300016: "fourmie-ouvri\xE8re-saut-d_8"
+    21300018: "fourmie-ouvri\xE8re-saut-d_9"
+    21300020: "fourmie-ouvri\xE8re-saut-d_10"
+    21300022: "fourmie-ouvri\xE8re-saut-d_11"
+    21300024: "fourmie-ouvri\xE8re-saut-d_12"
+    21300026: "fourmie-ouvri\xE8re-saut-d_13"
+    21300028: "fourmie-ouvri\xE8re-saut-d_14"
+    21300030: "fourmie-ouvri\xE8re-saut-d_15"
+    21300032: "fourmie-ouvri\xE8re-saut-d_16"
+    21300034: "fourmie-ouvri\xE8re-saut-d_17"
+    21300036: "fourmie-ouvri\xE8re-saut-d_18"
+    21300038: "fourmie-ouvri\xE8re-saut-d_19"
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_0"
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 958
+        width: 221
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70da95756fb4c844ac9a0e5170c7957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_1"
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 961
+        width: 206
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885fe3dc1d7d77a42b1e0881c1961332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_2"
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 958
+        width: 221
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59b9f825bca4304e8b400b2d5b0f1bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_3"
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 960
+        width: 232
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0ace423a4f9aa4f869d6e1a18b878c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_4"
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 961
+        width: 235
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0e9e6d90de8104e9d68ea09da48d7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_5"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 727
+        width: 231
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9513a080e16e36140915ee8b85165f83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_6"
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 714
+        width: 232
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9cb263a94ce8e4e9a46015d924839a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_7"
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 695
+        width: 232
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9b4858b2070b14b9596162424fe6a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_8"
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 683
+        width: 232
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82540c67d1403ce4d8e135cb872b5055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_9"
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 670
+        width: 232
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd923662a25a4af4a903c019b5eaecb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_10"
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 378
+        width: 232
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc78c758b9467674bb0c3c87712ec629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_11"
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 402
+        width: 232
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85f0fc49fb474b43b44337c55b6acc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_12"
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 408
+        width: 233
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301917264aaddc745904a5be2be78695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_13"
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 422
+        width: 232
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256143a235b957946abb7f1b6e902ad6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_14"
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 437
+        width: 232
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab0f691fccfc8140b4525030fffe76e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_15"
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 92
+        width: 235
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0f32888b8d95e40a1bfe6c0d5dc854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_16"
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 90
+        width: 233
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b420cbc8a409a964eab5bf03c4675a27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_17"
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 89
+        width: 220
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb63da35ee2574419a08fcc53b55f09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_18"
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 92
+        width: 200
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30973ee7c97974a4eb563cd0f490d926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fourmie-ouvri\xE8re-saut-d_19"
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 92
+        width: 218
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383245abdb2e37044897c54e92b22216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1fbbf66e4604a834ca1edb3c4244b535
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
