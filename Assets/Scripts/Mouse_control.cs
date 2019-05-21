@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mouse_control : MonoBehaviour
 {
-    public GameObject PheromoneOrange;
+    public GameObject Pheromone;
 
     //public float minimumInitialScale;
     private Vector3 posInit;
@@ -38,7 +38,7 @@ public class Mouse_control : MonoBehaviour
         {
             Vector3 posFin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float dist = Vector3.Distance(posFin, posInit);
-            pheromone.transform.localScale = dist * new Vector3(1, 1, 1);
+            pheromone.transform.Find("Pheromone_Range").transform.localScale = dist * new Vector3(0.1f, 0.1f, 0.1f);
         }
 
     }
@@ -50,7 +50,7 @@ public class Mouse_control : MonoBehaviour
     {
         posInit = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         posInit.z = 0;
-        pheromone = Instantiate(PheromoneOrange, posInit, Quaternion.identity);
+        pheromone = Instantiate(Pheromone, posInit, Quaternion.identity);
         pheromone.SetActive(true);
     }
 
