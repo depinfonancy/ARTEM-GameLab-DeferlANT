@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class Mouse_control : MonoBehaviour
 {
     public GameObject PheromoneOrange;
+    public TileBase brushTarget;
 
     //public float minimumInitialScale;
     private Vector3 posInit;
@@ -14,22 +15,29 @@ public class Mouse_control : MonoBehaviour
     // marque quand le bouton de la souris est enfonce
     bool enCours = false;
 
-    Tilemap tilemap;
+    public Tilemap tilemap ;
 
 
     void Start()
     {
-        Tilemap tilemap = GetComponent<Tilemap>();
+        //Tilemap tilemap = GetComponent<Tilemap>();
     }
 
 
     void Update()
     {
+        GridLayout gridLayout = transform.parent.GetComponentInParent<GridLayout>();
         Vector3 posFin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         // controle d'un petit curseur qui montre ou sera placee la prochaine pheromone (on limite les possibilites 
         // de placement pour essayer de rendre le code plus facile).
-        Vector3 globalTilePosition = tilemap.GetCellCenterWorld(posFin); // A FINIR
+        Vector3Int cellPosition = gridLayout.WorldToCell(posFin);
+        //Debug.Log(cellPosition);
 
+        // paint une nouvelle case
+        if (Input.GetMouseButtonDown(1))
+        {
+            tilemap.SetTile(cellPosition, brushTarget);
+        }
 
 
         // a l'appui sur le bouton gauche de la souris un cercle de pheromone apparait
