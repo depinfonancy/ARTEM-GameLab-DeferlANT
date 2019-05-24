@@ -15,6 +15,7 @@ public class Mouse_control : MonoBehaviour
 
 
 
+
     void Update()
     {
         // a l'appui sur le bouton gauche de la souris un cercle de pheromone apparait
@@ -39,6 +40,12 @@ public class Mouse_control : MonoBehaviour
             Vector3 posFin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float dist = Vector3.Distance(posFin, posInit);
             pheromone.transform.Find("Pheromone_Range").transform.localScale = dist * new Vector3(0.1f, 0.1f, 0.1f);
+
+            //Ici il faut modifier le collider pour qu'il match avec le sprite, il faut trouver le bon rapport ou la bonne méthode
+            /*
+            CircleCollider2D collider = pheromone.transform.Find("Pheromone_Range").GetComponent<CircleCollider2D>();
+            collider.radius = dist*0.1f;
+            */
         }
 
     }
