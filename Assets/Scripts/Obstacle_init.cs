@@ -17,7 +17,7 @@ public class Obstacle_init : MonoBehaviour
 
         BoundsInt bounds = tilemap.cellBounds; //récupère le rectangle encadrant toutes les tiles disposées
         TileBase[] tileArray = tilemap.GetTilesBlock(bounds); //renvoi toutes les tiles comprises dans "bounds"
-        GameObject[] prefabMap = tilemap.GetComponent<GameObject>(bounds);
+        // = tilemap.GetComponent<GameObject>(bounds);
 
 
         for (int x = 0; x < bounds.size.x; x++)
@@ -35,11 +35,12 @@ public class Obstacle_init : MonoBehaviour
 
                     accesibleTilePositionList.Add(globalTilePosition);
                     //Debug.Log("AddedTile:" + tile.name);
-                    switch(KeyValuePair){
-                        case tile{
+                    /*switch(KeyValuePair){
+                        case tile:
+                            {
 
                             }
-                    }
+                    }*/
                 }
             }
         }
