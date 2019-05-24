@@ -8235,7 +8235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1154707064
 Transform:
   m_ObjectHideFlags: 0
@@ -8506,7 +8506,7 @@ GameObject:
   - component: {fileID: 1207792386}
   m_Layer: 0
   m_Name: Mouse_control
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8523,8 +8523,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc10d6c911b0efb4091f118a296a2a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plein: {fileID: 11400000, guid: 375f2fd551e4ca7489ed0b747f6a6c1d, type: 2}
+  salle: {fileID: 11400000, guid: 3a57dd8a7807bcf4a8ea35602ba8b27a, type: 2}
+  salled: {fileID: 11400000, guid: d97c610df5ee86b478eeba7f7d97e1ce, type: 2}
+  salleg: {fileID: 11400000, guid: a69730a5f42d3b349b4899b940e5f97b, type: 2}
+  virhd: {fileID: 11400000, guid: 94ebe8f557c968c45a285ff8fabc8c03, type: 2}
+  virhg: {fileID: 11400000, guid: 09bc7dba32a0a1f49b0dad020ea71558, type: 2}
+  virbd: {fileID: 11400000, guid: beb4c9ba0fb6451439b4e4d8262a3c75, type: 2}
+  virbg: {fileID: 11400000, guid: 2919302f0f3db0f499e4dd4017ccc763, type: 2}
+  vertical: {fileID: 11400000, guid: 083c4d8d55a72574f8a5e012e03f269a, type: 2}
+  horizontal: {fileID: 11400000, guid: 81da062916b439d4b971c44b971db252, type: 2}
+  creuseh: {fileID: 11400000, guid: 22889c53116830b4db0ed520c54b20df, type: 2}
+  creuseb: {fileID: 11400000, guid: 679a738c7da860146b56e8877c686cce, type: 2}
+  creused: {fileID: 11400000, guid: 3853863e85b2b9a44b4adb9e89115932, type: 2}
+  creuseg: {fileID: 11400000, guid: 015c0cf42e9133f4c868c6b0fa36ddf3, type: 2}
+  Tg: {fileID: 11400000, guid: 7ae4eae9144cfe846b5cdd97fb275c69, type: 2}
+  Td: {fileID: 11400000, guid: d35e516ec0269664a96bedec7ec6dde8, type: 2}
+  Th: {fileID: 11400000, guid: 6e63dcc5669c8eb4fbf4122d5648bca6, type: 2}
+  Tb: {fileID: 11400000, guid: 76df51b89cda2644fab62ba5a2be409f, type: 2}
+  intersection: {fileID: 0}
   PheromoneOrange: {fileID: 6701642073555616462}
-  brushTarget: {fileID: 11400000, guid: 679a738c7da860146b56e8877c686cce, type: 2}
   tilemap: {fileID: 1381559675}
 --- !u!4 &1207792385
 Transform:
@@ -8534,8 +8552,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207792383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.0201879, z: -12.76645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -1.0201879, z: -1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1486083113}
   m_RootOrder: 2
@@ -15174,14 +15192,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02429f6a93c45b4ba80b9cbdf95714e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TilePlein: {fileID: 0}
-  TileSalle: {fileID: 0}
-  TileSalle_gauche: {fileID: 0}
-  TileSalle_droite: {fileID: 0}
-  TileEn_cours_gauche: {fileID: 0}
-  TileEn_cours_droite: {fileID: 0}
-  TileEn_cours_bas: {fileID: 0}
-  TileEn_cours_haut: {fileID: 0}
+  TilePlein: {fileID: 11400000, guid: 375f2fd551e4ca7489ed0b747f6a6c1d, type: 2}
+  TileSalle: {fileID: 11400000, guid: 3a57dd8a7807bcf4a8ea35602ba8b27a, type: 2}
+  TileSalle_gauche: {fileID: 11400000, guid: d97c610df5ee86b478eeba7f7d97e1ce, type: 2}
+  TileSalle_droite: {fileID: 11400000, guid: a69730a5f42d3b349b4899b940e5f97b, type: 2}
+  TileEn_cours_gauche: {fileID: 11400000, guid: 3853863e85b2b9a44b4adb9e89115932,
+    type: 2}
+  TileEn_cours_droite: {fileID: 11400000, guid: 015c0cf42e9133f4c868c6b0fa36ddf3,
+    type: 2}
+  TileEn_cours_bas: {fileID: 11400000, guid: 22889c53116830b4db0ed520c54b20df, type: 2}
+  TileEn_cours_haut: {fileID: 11400000, guid: 679a738c7da860146b56e8877c686cce, type: 2}
 --- !u!1001 &1392448390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15875,7 +15895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panSpeed: 20
   panBorderThickness: 10
-  panLimit: {x: 0, y: 0}
+  panLimit: {x: 10, y: 10}
   scrollSpeed: 20
   maxZoom: 5
   minZoom: 40
