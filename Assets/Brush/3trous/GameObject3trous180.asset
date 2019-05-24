@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
-  m_Name: Obstacle
+  m_Name: GameObject3trous180
   m_EditorClassIdentifier: 
   m_Cells:
   - m_Tile: {fileID: 0}
@@ -35,6 +35,6 @@ MonoBehaviour:
   m_Size: {x: 1, y: 1, z: 1}
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Prefabs:
-  - {fileID: 9059034011008972413, guid: dd1de6c3cc42cc0408c86560b8722e40, type: 3}
+  - {fileID: 2370533869853440237, guid: 0f5039ba0337ba04ea461a952da9ca96, type: 3}
   m_PerlinScale: 0.5
   m_Z: 0
