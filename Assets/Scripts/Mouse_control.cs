@@ -32,9 +32,9 @@ public class Mouse_control : MonoBehaviour
     public TileBase intersection;
 
     
-
-    public GameObject PheromoneOrange;
     
+    
+    public GameObject Pheromone;
 
     //public float minimumInitialScale;
 
@@ -53,6 +53,7 @@ public class Mouse_control : MonoBehaviour
         //Tilemap tilemap = GetComponent<Tilemap>();
         posCursor = GetComponent<Transform>().position;
     }
+
 
 
     void Update()
@@ -152,7 +153,13 @@ public class Mouse_control : MonoBehaviour
         if (enCours)
         {
             float dist = Vector3.Distance(posFin, posInit);
-            pheromone.transform.localScale = dist * new Vector3(1, 1, 1);
+            pheromone.transform.Find("Pheromone_Range").transform.localScale = dist * new Vector3(0.1f, 0.1f, 0.1f);
+
+            //Ici il faut modifier le collider pour qu'il match avec le sprite, il faut trouver le bon rapport ou la bonne méthode
+            /*
+            CircleCollider2D collider = pheromone.transform.Find("Pheromone_Range").GetComponent<CircleCollider2D>();
+            collider.radius = dist*0.1f;
+            */
         }
 
     }
@@ -164,7 +171,7 @@ public class Mouse_control : MonoBehaviour
     {
         posInit = origin;
         posInit.z = 0;
-        pheromone = Instantiate(PheromoneOrange, origin, Quaternion.identity);
+        pheromone = Instantiate(Pheromone, posInit, Quaternion.identity);
         pheromone.SetActive(true);
     }
 
