@@ -15,7 +15,6 @@ public class Tiles_Monitor : MonoBehaviour
     public TileBase TileEn_cours_droite;
     public TileBase TileEn_cours_bas;
     public TileBase TileEn_cours_haut;
-    public TileBase TileVide;
 
     public static List<Vector3> accesibleTilePositionList = new List<Vector3>(); //Liste positions des tiles accessibles aux fourmis
     public static List<Vector3> TileofInterest = new List<Vector3>(); //Liste positions des tiles pour l'IA des fourmis
@@ -46,8 +45,7 @@ public class Tiles_Monitor : MonoBehaviour
                     accesibleTilePositionList.Add(globalTilePosition);
                     //Debug.Log("AddedTile:" + tile.name);
 
-                    if (tile == TileSalle || tile == TileSalle_droite || tile == TileSalle_gauche || tile == TileEn_cours_bas || tile == TileEn_cours_droite || tile == TileEn_cours_gauche || tile == TileEn_cours_haut /*|| tile == TileVide*/)
-                    //if (tile == TileVide)   //Pour tester la sortie à l'extérieur, ne marche pas pour l'instant, la fourmi ne bouge pas
+                    if (tile == TileSalle || tile == TileSalle_droite || tile == TileSalle_gauche || tile == TileEn_cours_bas || tile == TileEn_cours_droite || tile == TileEn_cours_gauche || tile == TileEn_cours_haut)
                     {
                         TileofInterest.Add(globalTilePosition);
                     }

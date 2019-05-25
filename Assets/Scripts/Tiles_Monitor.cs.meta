@@ -3,7 +3,15 @@ guid: e02429f6a93c45b4ba80b9cbdf95714e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - TilePlein: {fileID: 11400000, guid: 375f2fd551e4ca7489ed0b747f6a6c1d, type: 2}
+  - TileSalle: {fileID: 11400000, guid: 3a57dd8a7807bcf4a8ea35602ba8b27a, type: 2}
+  - TileSalle_gauche: {instanceID: 0}
+  - TileSalle_droite: {instanceID: 0}
+  - TileEn_cours_gauche: {instanceID: 0}
+  - TileEn_cours_droite: {instanceID: 0}
+  - TileEn_cours_bas: {instanceID: 0}
+  - TileEn_cours_haut: {instanceID: 0}
   executionOrder: 100
   icon: {instanceID: 0}
   userData: 
