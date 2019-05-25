@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
-  m_Name: Obstacle
+  m_Name: Obstacle2TrousBG
   m_EditorClassIdentifier: 
   m_Cells:
   - m_Tile: {fileID: 0}
@@ -35,6 +35,6 @@ MonoBehaviour:
   m_Size: {x: 1, y: 1, z: 1}
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Prefabs:
-  - {fileID: 6801806993543792317, guid: ff8a85672e4ce2b488a86dcb7c3cccd3, type: 3}
+  - {fileID: 5609936423675273651, guid: f9e76adc34fd84d4093c28fd074d09ba, type: 3}
   m_PerlinScale: 0.5
   m_Z: 0
