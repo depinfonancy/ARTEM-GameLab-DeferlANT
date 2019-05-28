@@ -280,7 +280,7 @@ public class Mouse_control : MonoBehaviour
 
 
 
-    // update en case pas case
+    // update en case par case
     void miseAJourCase(Vector3Int cellPosition, string direction)
     {
         TileBase travail = tilemap.GetTile(cellPosition);
