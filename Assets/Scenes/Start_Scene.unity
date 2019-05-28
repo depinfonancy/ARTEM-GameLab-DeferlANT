@@ -5289,7 +5289,7 @@ Transform:
   - {fileID: 2094144917}
   - {fileID: 1782261566}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &430642376 stripped
 Transform:
@@ -18626,6 +18626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207792385}
   - component: {fileID: 1207792384}
+  - component: {fileID: 1207792386}
   m_Layer: 0
   m_Name: Mouse_control
   m_TagString: Untagged
@@ -18645,7 +18646,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc10d6c911b0efb4091f118a296a2a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plein: {fileID: 11400000, guid: 375f2fd551e4ca7489ed0b747f6a6c1d, type: 2}
+  salle: {fileID: 11400000, guid: 3a57dd8a7807bcf4a8ea35602ba8b27a, type: 2}
+  salled: {fileID: 11400000, guid: d97c610df5ee86b478eeba7f7d97e1ce, type: 2}
+  salleg: {fileID: 11400000, guid: a69730a5f42d3b349b4899b940e5f97b, type: 2}
+  virhd: {fileID: 11400000, guid: 94ebe8f557c968c45a285ff8fabc8c03, type: 2}
+  virhg: {fileID: 11400000, guid: 09bc7dba32a0a1f49b0dad020ea71558, type: 2}
+  virbd: {fileID: 11400000, guid: beb4c9ba0fb6451439b4e4d8262a3c75, type: 2}
+  virbg: {fileID: 11400000, guid: 2919302f0f3db0f499e4dd4017ccc763, type: 2}
+  vertical: {fileID: 11400000, guid: 083c4d8d55a72574f8a5e012e03f269a, type: 2}
+  horizontal: {fileID: 11400000, guid: 81da062916b439d4b971c44b971db252, type: 2}
+  creuseh: {fileID: 11400000, guid: 22889c53116830b4db0ed520c54b20df, type: 2}
+  creuseb: {fileID: 11400000, guid: 679a738c7da860146b56e8877c686cce, type: 2}
+  creused: {fileID: 11400000, guid: 3853863e85b2b9a44b4adb9e89115932, type: 2}
+  creuseg: {fileID: 11400000, guid: 015c0cf42e9133f4c868c6b0fa36ddf3, type: 2}
+  Tg: {fileID: 11400000, guid: 7ae4eae9144cfe846b5cdd97fb275c69, type: 2}
+  Td: {fileID: 11400000, guid: d35e516ec0269664a96bedec7ec6dde8, type: 2}
+  Th: {fileID: 11400000, guid: 6e63dcc5669c8eb4fbf4122d5648bca6, type: 2}
+  Tb: {fileID: 11400000, guid: 76df51b89cda2644fab62ba5a2be409f, type: 2}
+  intersection: {fileID: 11400000, guid: 2ba9c5ca0e2a16e4e91fcfb0ad13ed3d, type: 2}
   Pheromone: {fileID: 6701642073555616462}
+  tilemap: {fileID: 1381559675}
 --- !u!4 &1207792385
 Transform:
   m_ObjectHideFlags: 0
@@ -18653,13 +18674,61 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207792383}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.01837109, y: -1.0201879, z: -12.76645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1486083113}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1207792386
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207792383}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d044fd615ce2f354db4768c5f2946e62, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.62, y: 2.62}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1208866134
 GameObject:
   m_ObjectHideFlags: 0
@@ -30874,6 +30943,7 @@ Transform:
   - {fileID: 1381559673}
   - {fileID: 645667295}
   - {fileID: 944682508}
+  - {fileID: 1207792385}
   m_Father: {fileID: 425105842}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32692,7 +32762,7 @@ Transform:
   - {fileID: 831327646}
   - {fileID: 2082674017}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1635445869 stripped
 Transform:
