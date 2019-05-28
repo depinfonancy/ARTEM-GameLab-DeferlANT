@@ -39,7 +39,8 @@ public class CreditScript : MonoBehaviour
 
 
         //texte des crédits
-        //GUI.Label(new Rect(Screen.width / 2, Screen.height / 3, 300, 500), "This is the text string for a Label Control");
+        GUI.Label(new Rect(Screen.width/2 - 45, Screen.height/3 + 20, 300, 500),
+            "Gibraël Bay\nThomas Calais\nPatrice Chanol\nBastien Eglem\nJulie Esclafert\nMina Hwang\nPierre Laffont\nMaxime Latgé\nCédric Piquet\nBenjamin Soulan\n\nOlivier Ageron\nCédric Zanni");
     }
 
       

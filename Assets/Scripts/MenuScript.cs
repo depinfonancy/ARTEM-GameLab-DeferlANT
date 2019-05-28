@@ -56,6 +56,18 @@ public class MenuScript : MonoBehaviour
             // "Start_Scene" est le nom de la première scène que nous avons créés.
             UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
         }
+
+        if (
+          GUI.Button(
+            new Rect(10, Screen.height -60, 100, 50),
+            "Quit Game"
+          )
+        )
+        {
+            // Sur le clic, on démarre le premier niveau
+            // "Start_Scene" est le nom de la première scène que nous avons créés.
+            Application.Quit();
+        }
     }
 
 
