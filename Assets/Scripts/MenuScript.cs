@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-IMGUI est utilisé en attendant mais c'est très malpropre
-On met un bouton transparent devant le bon sprite pour donner l'illusion mais ce n'ai pas du tout pratique
-Il faut refaire le menu de manière plus propre en utilisant Unity.UI
+IMGUI est utilisé en attendant mais c'est pas très personnalisé 
+On peux refaire le menu de manière plus stylé en utilisant Unity.UI
 Ci dessous tuto d'1h expliquant comment faire ça bien
 https://unity3d.com/fr/learn/tutorials/topics/user-interface-ui/creating-main-menu
     */
@@ -25,8 +24,8 @@ public class MenuScript : MonoBehaviour
 
     void OnGUI()
     {
-        const int buttonWidth = 165;
-        const int buttonHeight = 45;
+        const int buttonWidth = 180;
+        const int buttonHeight = 60;
 
         // On applique l'apparence
         GUI.skin = skin;
@@ -35,14 +34,39 @@ public class MenuScript : MonoBehaviour
         if (
           GUI.Button(
             // Centré en x
-            new Rect(Screen.width / 2 - (buttonWidth / 2),(Screen.height / 3) + (buttonHeight/2) -10,buttonWidth,buttonHeight),
-            ""
+            new Rect(Screen.width / 2 - (buttonWidth / 2),(Screen.height / 3) + (buttonHeight/2),buttonWidth,buttonHeight),
+            "Nouvelle Partie"
           )
         )
         {
             // Sur le clic, on démarre le premier niveau
             // "Start_Scene" est le nom de la première scène que nous avons créés.
             UnityEngine.SceneManagement.SceneManager.LoadScene("Start_Scene");
+        }
+
+        if (
+          GUI.Button(
+            // Centré en x
+            new Rect(Screen.width / 2 - (buttonWidth / 2), (Screen.height / 3) + 4*(buttonHeight/2), buttonWidth, buttonHeight),
+            "Crédits"
+          )
+        )
+        {
+            // Sur le clic, on démarre le premier niveau
+            // "Start_Scene" est le nom de la première scène que nous avons créés.
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+        }
+
+        if (
+          GUI.Button(
+            new Rect(10, Screen.height -60, 100, 50),
+            "Quit Game"
+          )
+        )
+        {
+            // Sur le clic, on démarre le premier niveau
+            // "Start_Scene" est le nom de la première scène que nous avons créés.
+            Application.Quit();
         }
     }
 
