@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class Obstacle_init : MonoBehaviour
 {
-    public static Tilemap tilemap;
+    public Tilemap tilemap;
     public Grid grid;
 
     public GridBrushBase plein;
