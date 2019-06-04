@@ -34,7 +34,7 @@ public class Mouse_control : MonoBehaviour
     public GameObject Pheromone;
 
     // recuperer le script qu'on va appeler
-    public GameObject obstacle_init;
+    //public GameObject obstacle_init;
 
     //public float minimumInitialScale;
     private Vector3 posInit;
@@ -134,7 +134,7 @@ public class Mouse_control : MonoBehaviour
             TileBase tileg = tilemap.GetTile(cellPosition + new Vector3Int(-1, 0, 0));
             // on recupere dans le tableau des tiles les index de tile pour chaque tile
             int[] tiles_a_changer = position_dans_tableau(liste_des_tiles, tile1, tileh, tiled, tileb, tileg);
-            obstacle_init.GetComponent<Obstacle_init>().actualise_brush(cellPosition, tiles_a_changer);
+            GetComponent<Obstacle_init>().actualise_brush(cellPosition, tiles_a_changer);
 
         }
 

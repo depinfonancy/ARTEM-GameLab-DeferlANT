@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class Obstacle_init : MonoBehaviour
 {
-    public static Tilemap tilemap;
+    public Tilemap tilemap;
     public Grid grid;
 
     public GridBrushBase plein;
@@ -86,6 +86,7 @@ public class Obstacle_init : MonoBehaviour
     // fonction appellee depuis mouse control, actualise les collider du navmesh
     public void actualise_brush(Vector3Int pos1, int[] brush) // on donne la position de la tile et la position de la tile dans la liste de tiles pour associer le bon brush
     {
+        Debug.Log("ok");
         liste_des_brush[brush[0]].Paint(grid, tilemap.gameObject, pos1);
         liste_des_brush[brush[1]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(0, 1, 0));
         liste_des_brush[brush[2]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(1, 0, 0));
