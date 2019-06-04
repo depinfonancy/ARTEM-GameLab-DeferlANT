@@ -33,6 +33,9 @@ public class Mouse_control : MonoBehaviour
 
     public GameObject Pheromone;
 
+    // recuperer le script qu'on va appeler
+    public GameObject obstacle_init;
+
     //public float minimumInitialScale;
     private Vector3 posInit;
     private Vector3 posCursor;
@@ -43,7 +46,13 @@ public class Mouse_control : MonoBehaviour
     public Tilemap tilemap;
     GameObject pheromone;
 
+    // tableau des tiles indexees en fonction de leurs ouvertures (haut : 1er bit ; droite : 2eme bit...)
+    TileBase[] liste_des_tiles;
 
+    private void Start()
+    {
+        liste_des_tiles = new TileBase[] { plein, creuseh, creused, virhd, creuseb, vertical, virbd, Tg, creuseg, virhg, horizontal, Tb, virbg, Td, Th, intersection, salle, salled, salleg};
+    }
 
     void Update()
     {
@@ -117,6 +126,16 @@ public class Mouse_control : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             creercase(direction, cellPosition);
+            // on recupere les tiles autour de celle cliquee pour les actualiser ensuite. Elles sont dans un ordre bien precis (haut droite bas gauche)
+            TileBase tile1 = tilemap.GetTile(cellPosition);
+            TileBase tileh = tilemap.GetTile(cellPosition + new Vector3Int(0, 1, 0));
+            TileBase tiled = tilemap.GetTile(cellPosition + new Vector3Int(1, 0, 0));
+            TileBase tileb = tilemap.GetTile(cellPosition + new Vector3Int(0, -1, 0));
+            TileBase tileg = tilemap.GetTile(cellPosition + new Vector3Int(-1, 0, 0));
+            // on recupere dans le tableau des tiles les index de tile pour chaque tile
+            int[] tiles_a_changer = position_dans_tableau(liste_des_tiles, tile1, tileh, tiled, tileb, tileg);
+            obstacle_init.GetComponent<Obstacle_init>().actualise_brush(cellPosition, tiles_a_changer);
+
         }
 
 
@@ -549,6 +568,37 @@ public class Mouse_control : MonoBehaviour
                 }
             }
         }
+    }
+
+
+    // parcours du tableau pour avoir l'index dans le tableau
+    int[] position_dans_tableau(TileBase[] tableau, TileBase obj1, TileBase obj2, TileBase obj3, TileBase obj4, TileBase obj5)
+    {
+        int[] i = { 0, 0, 0, 0, 0 };
+        for(int j=0; j < 19; j++)
+        {
+            if(tableau[j] == obj1)
+            {
+                i[0] = j;
+            }
+            if (tableau[j] == obj2)
+            {
+                i[1] = j;
+            }
+            if (tableau[j] == obj3)
+            {
+                i[2] = j;
+            }
+            if (tableau[j] == obj4)
+            {
+                i[3] = j;
+            }
+            if (tableau[j] == obj5)
+            {
+                i[4] = j;
+            }
+        }
+        return i;
     }
 
 }

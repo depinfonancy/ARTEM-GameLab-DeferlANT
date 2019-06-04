@@ -7,12 +7,42 @@ using UnityEngine.Tilemaps;
 public class Obstacle_init : MonoBehaviour
 {
     public static Tilemap tilemap;
+    public Grid grid;
 
+    public GridBrushBase plein;
+
+    public GridBrushBase salle;
+    public GridBrushBase salled;
+    public GridBrushBase salleg;
+
+    public GridBrushBase virhd;
+    public GridBrushBase virhg;
+    public GridBrushBase virbd;
+    public GridBrushBase virbg;
+    public GridBrushBase vertical;
+    public GridBrushBase horizontal;
+
+    public GridBrushBase creuseh;
+    public GridBrushBase creuseb;
+    public GridBrushBase creused;
+    public GridBrushBase creuseg;
+
+    public GridBrushBase Tg;
+    public GridBrushBase Td;
+    public GridBrushBase Th;
+    public GridBrushBase Tb;
+
+    public GridBrushBase intersection;
+
+    GridBrushBase[] liste_des_brush;
+    
     public static List<Vector3> accesibleTilePositionList = new List<Vector3>(); //Liste positions des tiles accessibles aux fourmis
 
     // Start is called before the first frame update
     void Start()
     {
+        liste_des_brush = new GridBrushBase[] { creuseh, creused, virhd, creuseb, vertical, virbd, Tg, creuseg, virhg, horizontal, Tb, virbg, Td, Th, intersection, salle, salled, salleg};
+
         Tilemap tilemap = GetComponent<Tilemap>();//récupère l'objet tilemap.
 
         BoundsInt bounds = tilemap.cellBounds; //récupère le rectangle encadrant toutes les tiles disposées
@@ -51,4 +81,16 @@ public class Obstacle_init : MonoBehaviour
     {
         
     }
+
+
+    // fonction appellee depuis mouse control, actualise les collider du navmesh
+    public void actualise_brush(Vector3Int pos1, int[] brush) // on donne la position de la tile et la position de la tile dans la liste de tiles pour associer le bon brush
+    {
+        liste_des_brush[brush[0]].Paint(grid, tilemap.gameObject, pos1);
+        liste_des_brush[brush[1]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(0, 1, 0));
+        liste_des_brush[brush[2]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(1, 0, 0));
+        liste_des_brush[brush[3]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(0, -1, 0));
+        liste_des_brush[brush[4]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(-1, 0, 0));
+    }
+
 }
