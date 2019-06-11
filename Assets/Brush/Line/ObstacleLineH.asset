@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
-  m_Name: ObstacleLine90 1
+  m_Name: ObstacleLineH
   m_EditorClassIdentifier: 
   m_Cells:
   - m_Tile: {fileID: 0}
@@ -35,6 +35,6 @@ MonoBehaviour:
   m_Size: {x: 1, y: 1, z: 1}
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Prefabs:
-  - {fileID: 7150865287227076585, guid: 470afbddbe9f3f044916cf382a87a7b6, type: 3}
+  - {fileID: 4594749503668904870, guid: 398654e1b70b8a445977a2ec637c29b3, type: 3}
   m_PerlinScale: 0.5
   m_Z: 0
