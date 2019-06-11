@@ -13,12 +13,22 @@ public class AI_ant : MonoBehaviour
 
     NavMeshAgent nav;  //definition du NavMesh
     private Animator anim_fourmi;  //definition de l'Animator
+
     protected readonly int m_HashReachingPoint = Animator.StringToHash("reaching_point");  //Hash permettant de modifier l'état de l'animator (pour le booléen reaching point)
-    private bool m_reaching_point = false;  //booléen indiquant si la fourmi est en train de rejoindre un point ou non
+    public bool m_reaching_point = false;  //booléen indiquant si la fourmi est en train de rejoindre un point ou non
+
+    protected readonly int m_HashTriggered_by_Pheromone = Animator.StringToHash("triggered_by_pheromone");  //Hash permettant de modifier l'état de l'animator (pour le booléen triggered_by_pheromone)
+    public bool m_Triggered_by_Pheromone = false;  //booléen indiquant si la fourmi est attirée par une pheromone ou non
+
     private Vector3 dest = new Vector3(0, 0, 0);   //vecteur contenant la destination actuelle de la fourmi
+
     private bool facingRight = true;    // facing direction of the ant
-    private NavMeshAgent navmeshFourmi;
+    
     protected readonly int m_HashSpeedPara = Animator.StringToHash("speed");
+
+
+
+
     //method returning a new random destination
     private Vector3 pickRandomTile()
     {
@@ -46,7 +56,7 @@ public class AI_ant : MonoBehaviour
         //récupération des components
         nav = GetComponent<NavMeshAgent>();
         anim_fourmi = gameObject.transform.parent.Find("VisuFourmi").GetComponent<Animator>();
-        navmeshFourmi = gameObject.transform.GetComponent<NavMeshAgent>();
+        
     }
 
     // Update is called once per frame
@@ -54,8 +64,8 @@ public class AI_ant : MonoBehaviour
     {
         //----------------MARCHE ALEATOIRE-----------------------------
 
-        //Décision d'un point à atteindre lorsqu'il n'y en a pas
-        if (m_reaching_point == false)
+        //Décision d'un point à atteindre lorsqu'il n'y en a pas et que la fourmi n'est pas attirée par une phéromone
+        if (m_reaching_point == false && m_Triggered_by_Pheromone == false)
         {
             //choose randomly a destination
             dest = pickRandomTile();
@@ -76,12 +86,13 @@ public class AI_ant : MonoBehaviour
         gameObject.transform.parent.Find("VisuFourmi").transform.position = gameObject.transform.position;
 
         //------------------------------------------------------------------------
-        if ((navmeshFourmi.velocity.x > 0 && !facingRight) || (navmeshFourmi.velocity.x < 0 && facingRight))
+        if ((nav.velocity.x > 0 && !facingRight) || (nav.velocity.x < 0 && facingRight))
         {
             Flip();
         }
 
-        float h = Input.GetAxis("Horizontal");
-        anim_fourmi.SetFloat(m_HashSpeedPara, Mathf.Abs(h));
+        //A quoi ça sert appart générer des erreurs ???
+        //float h = Input.GetAxis("Horizontal");
+        //anim_fourmi.SetFloat(m_HashSpeedPara, Mathf.Abs(h));
     }
 }
