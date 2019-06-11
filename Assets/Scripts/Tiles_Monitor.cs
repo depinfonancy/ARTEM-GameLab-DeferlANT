@@ -90,6 +90,40 @@ public class Tiles_Monitor : MonoBehaviour
 
     }
 
+    // on appelle cte fonction pour actualiser TileOfInterest
+    public void calcul_accessibles()
+    {
+        TileofInterest.Clear();
+        BoundsInt bounds = tilemap.cellBounds; //récupère le rectangle encadrant toutes les tiles disposées
+        TileBase[] tileArray = tilemap.GetTilesBlock(bounds); //renvoi toutes les tiles comprises dans "bounds"
+
+        for (int x = 0; x < bounds.size.x; x++)
+        {
+            for (int y = 0; y < bounds.size.y; y++)
+            {
+                TileBase tile = tileArray[x + y * bounds.size.x];  //récupère la tile de position (x,y)
+                if (tile != null && tile != TilePlein)
+                {
+                    //coordonnées locales de la tile
+                    Vector3Int localTilePosition = new Vector3Int(x + bounds.xMin, y + bounds.yMin, 0);
+
+                    //conversion en coordonnées globales pour le navmesh
+                    Vector3 globalTilePosition = tilemap.GetCellCenterWorld(localTilePosition);
+
+                    //ajout de cette coordonnée à la liste
+                    accesibleTilePositionList.Add(globalTilePosition);
+                    //Debug.Log("AddedTile:" + tile.name);
+
+                    if (tile == TileSalle || tile == TileSalle_droite || tile == TileSalle_gauche || tile == TileEn_cours_bas || tile == TileEn_cours_droite || tile == TileEn_cours_gauche || tile == TileEn_cours_haut /*|| tile == TileVide*/)
+                    //if (tile == TileVide)   //Pour tester la sortie à l'extérieur, ne marche pas pour l'instant, la fourmi ne bouge pas
+                    {
+                        TileofInterest.Add(globalTilePosition);
+                    }
+                }
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

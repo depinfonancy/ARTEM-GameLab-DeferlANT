@@ -598,7 +598,6 @@ public class Mouse_control : MonoBehaviour
                 i[4] = j;
             }
         }
-        Debug.Log(i[0]);
         return i;
     }
 
