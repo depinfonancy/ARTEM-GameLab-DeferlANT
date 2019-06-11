@@ -575,9 +575,9 @@ public class Mouse_control : MonoBehaviour
     int[] position_dans_tableau(TileBase[] tableau, TileBase obj1, TileBase obj2, TileBase obj3, TileBase obj4, TileBase obj5)
     {
         int[] i = { 0, 0, 0, 0, 0 };
-        for(int j=0; j < 19; j++)
+        for (int j = 0; j < 19; j++)
         {
-            if(tableau[j] == obj1)
+            if (tableau[j] == obj1)
             {
                 i[0] = j;
             }
@@ -598,6 +598,7 @@ public class Mouse_control : MonoBehaviour
                 i[4] = j;
             }
         }
+        Debug.Log(i[0]);
         return i;
     }
 

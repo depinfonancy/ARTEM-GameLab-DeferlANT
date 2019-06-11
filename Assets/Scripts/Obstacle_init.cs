@@ -41,10 +41,21 @@ public class Obstacle_init : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        liste_des_brush = new GridBrushBase[] { creuseh, creused, virhd, creuseb, vertical, virbd, Tg, creuseg, virhg, horizontal, Tb, virbg, Td, Th, intersection, salle, salled, salleg};
+        liste_des_brush = new GridBrushBase[] {plein, creuseh, creused, virhd, creuseb, vertical, virbd, Tg, creuseg, virhg, horizontal, Tb, virbg, Td, Th, intersection, salle, salled, salleg};
 
         Tilemap tilemap = GetComponent<Tilemap>();//récupère l'objet tilemap.
 
+        calcul_accessibles();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void calcul_accessibles()
+    {
         BoundsInt bounds = tilemap.cellBounds; //récupère le rectangle encadrant toutes les tiles disposées
         TileBase[] tileArray = tilemap.GetTilesBlock(bounds); //renvoi toutes les tiles comprises dans "bounds"
         // = tilemap.GetComponent<GameObject>(bounds);
@@ -76,22 +87,30 @@ public class Obstacle_init : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     // fonction appellee depuis mouse control, actualise les collider du navmesh
     public void actualise_brush(Vector3Int pos1, int[] brush) // on donne la position de la tile et la position de la tile dans la liste de tiles pour associer le bon brush
     {
-        Debug.Log("ok");
+        Debug.Log(brush[0]);
+        Debug.Log(liste_des_brush[brush[0]]);
+        Debug.Log(liste_des_brush[brush[1]]);
+        Debug.Log(liste_des_brush[brush[2]]);
+        Debug.Log(liste_des_brush[brush[3]]);
+        Debug.Log(liste_des_brush[brush[4]]);
+
+        virbd.Erase(grid, tilemap.gameObject, pos1);
+        virbd.Erase(grid, tilemap.gameObject, pos1 + new Vector3Int(0, 1, 0));
+        virbd.Erase(grid, tilemap.gameObject, pos1 + new Vector3Int(0, -1, 0));
+        virbd.Erase(grid, tilemap.gameObject, pos1 + new Vector3Int(1, 0, 0));
+        virbd.Erase(grid, tilemap.gameObject, pos1 + new Vector3Int(-1, 0, 0));
         liste_des_brush[brush[0]].Paint(grid, tilemap.gameObject, pos1);
         liste_des_brush[brush[1]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(0, 1, 0));
         liste_des_brush[brush[2]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(1, 0, 0));
         liste_des_brush[brush[3]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(0, -1, 0));
         liste_des_brush[brush[4]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(-1, 0, 0));
+
+        calcul_accessibles();
     }
 
 }
