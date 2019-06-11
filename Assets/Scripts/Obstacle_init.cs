@@ -45,6 +45,17 @@ public class Obstacle_init : MonoBehaviour
 
         Tilemap tilemap = GetComponent<Tilemap>();//récupère l'objet tilemap.
 
+        calcul_accessibles();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void calcul_accessibles()
+    {
         BoundsInt bounds = tilemap.cellBounds; //récupère le rectangle encadrant toutes les tiles disposées
         TileBase[] tileArray = tilemap.GetTilesBlock(bounds); //renvoi toutes les tiles comprises dans "bounds"
         // = tilemap.GetComponent<GameObject>(bounds);
@@ -76,11 +87,6 @@ public class Obstacle_init : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     // fonction appellee depuis mouse control, actualise les collider du navmesh
@@ -103,6 +109,8 @@ public class Obstacle_init : MonoBehaviour
         liste_des_brush[brush[2]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(1, 0, 0));
         liste_des_brush[brush[3]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(0, -1, 0));
         liste_des_brush[brush[4]].Paint(grid, tilemap.gameObject, pos1 + new Vector3Int(-1, 0, 0));
+
+        calcul_accessibles();
     }
 
 }
