@@ -65,6 +65,8 @@ public class AI_ant : MonoBehaviour
         }
 
         //condition d'arrivée à destination (ici 1px, peut être amené à être modifié)
+        Debug.Log("Distance selon x :" + (dest.x - gameObject.transform.position.x) + "Distance selon y :" + (dest.y - gameObject.transform.position.y));
+        Debug.Log("Destination :" + dest + " et position :" + gameObject.transform.position);
         if (Math.Abs(dest.x - gameObject.transform.position.x) < 1 && Math.Abs(dest.y - gameObject.transform.position.y) < 1)
         {
             m_reaching_point = false;
