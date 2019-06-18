@@ -54,7 +54,7 @@ public class Obstacle_init : MonoBehaviour
         
     }
 
-    void calcul_accessibles()
+    public void calcul_accessibles()
     {
         BoundsInt bounds = tilemap.cellBounds; //récupère le rectangle encadrant toutes les tiles disposées
         TileBase[] tileArray = tilemap.GetTilesBlock(bounds); //renvoi toutes les tiles comprises dans "bounds"
