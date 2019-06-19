@@ -21,4 +21,4 @@ Patrice Chanol :
 
 
 Pierre Laffont :
-Contrôle de la caméra avec la souris et le clavier (touches Q W S X) / mécanique de creusage de la fourmilière et repérage de la position de la souris par rapport aux différentes cases (une grande partie du script mouse_control) / travail avec Benjamin sur l'actualisation des obstacles du pathfinding
+Contrôle de la caméra avec la souris et le clavier (touches Q W S X) / mécanique de creusage de la fourmilière, repérage de la position de la souris par rapport aux différentes cases et une partie du dépôt de phéromones (une grande partie du script mouse_control) / travail avec Benjamin sur l'actualisation des obstacles du pathfinding
