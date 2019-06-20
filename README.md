@@ -5,7 +5,8 @@ Qui à fait Quoi ?
 Bastien Eglem : 
 Scène de départ/Orientation fourmis/Marche aléatoire des fourmis (AI_ants)
 
-Benjamin Soulan : 
+Benjamin Soulan :
+Implémentation de Navmesh, création des blocks de collisions. (Deplacement_pierre_cedric)
 
 
 Cédric Piquet :
